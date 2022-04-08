@@ -1,23 +1,33 @@
 let N = +prompt("Cuántas hamburguesas son:");
-let TP, PA = 0, TO, TOT;
-let CA = 0.05
-
+let PA = 0;
+let CA = 0;
 
 let TI = +prompt("Ingrese tipo de hamburguesa: 1 = sencilla $20 , 2 = doble $25 , 3 = triple $28");
+let TP = +prompt("Ingrese tipo de pago: 1 = efectivo , 2 = tarjeta")
 
 if (TI == 1){
-    PA = N * 20;
-} else if (tipo == 2) {
-    PA = N * 25;
-} else if (tipo == 3){
-    PA = N * 28;
+    PA = 20;
+} else if (TI == 2) {
+    PA = 25;
 } else {
-    console.log("Ingrese un tipo de hamburguesa correcto")
+    PA = 28;
 }
 
-TP = +prompt("Ingrese el tipo de pago: 1 = efectivo , 2 = tarjeta")
+TO = PA * N;
 
 if (TP == 1){
-   console.log 
+    console.log( `El total por pagar es: ${TO}`)
+}else if (TP == 2){
+    CA = TO * 0.05; 
+    TOT = TO + CA
+    console.log(`El total por pagar es: ${TOT}`)
+    console.log(`El cargo es: ${CA}`)
 }
+
+
+
+
+
+    
+
 
